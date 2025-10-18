@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "ai-navigation",
+    "title": "AI-Based Autonomous Navigation System",
+    "summary": "Edge robotics prototype combining YOLO object detection, lane detection, HC-SR04 ultrasonic sensing and A* planning.",
+    "tech": [
+      "Python",
+      "OpenCV",
+      "YOLO",
+      "RPi.GPIO",
+      "A*"
+    ],
+    "repo": "https://github.com/jayaschool1981-rgb/AI-Based-Autonomous-Navigation-System",
+    "demo": "demo_videos/demo_navigation.mp4",
+    "category": "robotics",
+    "date": "Oct 2025",
+    "kv": "FPS: ~10-25"
+  },
+  {
+    "slug": "accident-detection",
+    "title": "Real-time Vehicular Accident Detection & Emergency Response",
+    "summary": "Sensor + camera based system to detect accidents in real-time and trigger emergency alerts (GSM/GPS integration).",
+    "tech": [
+      "Python",
+      "ML",
+      "GSM",
+      "GPS",
+      "Sensors"
+    ],
+    "repo": "https://github.com/jayaschool1981-rgb/Real-time-Vehicular-Accident-Detection",
+    "demo": "demo_videos/demo_accident.mp4",
+    "category": "vision",
+    "date": "Jul 2025",
+    "kv": "Precision: Prototype-level"
+  },
+  {
+    "slug": "vybe-ride",
+    "title": "Vybe Ride \u2014 JavaFX Ride-sharing UI",
+    "summary": "JavaFX app prototype for a ride-sharing interface with login and ride selection flow.",
+    "tech": [
+      "Java",
+      "JavaFX"
+    ],
+    "repo": "https://github.com/jayaschool1981-rgb/vybe-ride",
+    "demo": "",
+    "category": "app",
+    "date": "Jul 2025",
+    "kv": "UI Prototype"
+  }
+]

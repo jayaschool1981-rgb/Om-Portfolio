@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Project Detail — Om Barvekar</title><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="assets/css/style.css"></head>
+<body>
+  <div class="container">
+    <header class="header"><div class="brand"><div class="logo">OB</div><div class="title"><h1>Om Barvekar</h1><p>AI · Robotics</p></div></div>
+    <nav class="nav"><a class="btn ghost" href="index.html">Home</a><a class="btn ghost" href="projects.html">Projects</a><a class="btn ghost" href="achievements.html">Achievements</a><a class="btn ghost" href="links.html">Links</a><a class="btn ghost" href="contact.html">Contact</a><a class="btn" href="https://github.com/jayaschool1981-rgb" target="_blank">GitHub</a></nav></header>
+
+    <main class="grid">
+      <section class="panel" style="grid-column:1/-1">
+        <div class="section-title"><h2 id="pd-title">Project</h2><p id="pd-desc">Short description</p></div>
+        <div style="display:flex;gap:16px;flex-wrap:wrap">
+          <div style="flex:1;min-width:300px">
+            <div class="panel"><div id="pd-long">Loading project details…</div>
+            <div style="margin-top:12px;display:flex;gap:8px"><a id="pd-src" class="action-link" href="#">Source</a><a id="pd-demo" class="action-link primary" href="#">Demo</a></div></div>
+          </div>
+          <aside style="width:300px;min-width:260px">
+            <div class="panel"><div class="kv" style="font-weight:700">Tech Stack</div><div id="pd-tech" style="margin-top:8px;color:var(--muted)">—</div></div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <div class="footer">© 2025 Om Barvekar</div>
+  </div>
+  <script>
+    // load project data and replace placeholders
+    (function(){
+      const qs = new URLSearchParams(window.location.search);
+      const slug = qs.get('project');
+      fetch('/data/project-data.json').then(r=>r.json()).then(data=>{
+        const p = data.find(x=>x.slug===slug) || data[0];
+        document.getElementById('pd-title').innerText = p.title;
+        document.getElementById('pd-desc').innerText = p.summary;
+        document.getElementById('pd-long').innerHTML = p.long_html || '<p>No details</p>';
+        document.getElementById('pd-tech').innerText = p.tech.join(' • ');
+        document.getElementById('pd-src').href = p.repo;
+        document.getElementById('pd-demo').href = p.demo || '#';
+      }).catch(()=>{});
+    })();
+  </script>
+</body></html>
